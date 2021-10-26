@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 * {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   font-family: 'Space Mono', monospace;
 }
 
@@ -38,11 +38,11 @@ header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: 1px solid blue;
 }
 
@@ -56,8 +56,8 @@ header .toggle-btn {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 1rem;
 }
 
@@ -67,6 +67,78 @@ header .toggle-btn__text {
   text-transform: uppercase;
   letter-spacing: 2.5px;
   color: #4b6a8b;
+}
+
+.form {
+  width: calc(100vw - 48px);
+  padding: 12px;
+  margin: 1rem auto;
+  background: #fefefe;
+  border-radius: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  -webkit-box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-input {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: #2b3442;
+  font-size: 13px;
+  border: none;
+  cursor: pointer;
+}
+
+.form-input::-webkit-input-placeholder {
+  color: #4b6a8b;
+  font-size: 13px;
+}
+
+.form-input:-ms-input-placeholder {
+  color: #4b6a8b;
+  font-size: 13px;
+}
+
+.form-input::-ms-input-placeholder {
+  color: #4b6a8b;
+  font-size: 13px;
+}
+
+.form-input::placeholder {
+  color: #4b6a8b;
+  font-size: 13px;
+}
+
+.form-input:focus {
+  outline: none;
+}
+
+.form-error {
+  color: #f74646;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: none;
+}
+
+.form-btn {
+  display: block;
+  background: #0079ff;
+  border: none;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 700;
+  padding: 12.5px 15px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 body {
