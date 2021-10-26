@@ -1,6 +1,8 @@
 @import 'config';
 @import 'header';
+@import 'search-form';
 
 body {
   background: $bg-color;
+  color: red;
 }
