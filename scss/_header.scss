@@ -1,0 +1,28 @@
+header {
+  width: 100%;
+  height: fit-content;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid blue;
+
+  h1 {
+    letter-spacing: 0;
+    color: $secondary-color;
+  }
+
+  .toggle-btn {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &__text {
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2.5px;
+      color: $primary-color;
+    }
+  }
+}

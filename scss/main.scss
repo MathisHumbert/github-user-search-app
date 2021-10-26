@@ -1,3 +1,6 @@
+@import 'config';
+@import 'header';
+
 body {
-  background: #f2f2ff;
+  background: $bg-color;
 }
