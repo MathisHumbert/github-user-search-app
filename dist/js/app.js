@@ -4,7 +4,9 @@ const errorHtml = document.querySelector('.form-error');
 const form = document.querySelector('.form');
 const text = document.querySelector('.form-input');
 
-let API_URL = 'https://api.github.com/users/';
+// API
+const API_URL = 'https://api.github.com/users/';
+let githubUser = localStorage.getItem('github-user') || 'john-smilga';
 
 // months arr
 let months = [
@@ -22,26 +24,48 @@ let months = [
   'Dec',
 ];
 
-// windod load
+// window load
 window.addEventListener('DOMContentLoaded', () => {
-  getData(API_URL + 'john-smilga');
+  getData(API_URL + githubUser);
 });
 
 // fecth data
 async function fetchData(URL) {
   const response = await fetch(URL);
-  const data = await response.json();
-  return data;
+
+  if (response.status === 404) {
+    errorHtml.classList.add('show');
+    return 'err';
+  } else {
+    errorHtml.classList.remove('show');
+    const data = await response.json();
+    return data;
+  }
 }
 
 // get data
 async function getData(URL) {
   let data = await fetchData(URL);
 
-  if (data.message === 'Not Found') dispalayError(data);
-  else {
-    displayData(data);
-  }
+  if (data === 'err') return;
+
+  displayData(data);
+}
+
+// get form value
+form.addEventListener('submit', searchForm);
+
+function searchForm(e) {
+  e.preventDefault();
+  let value = text.value;
+
+  // search for a user
+  getData(API_URL + value);
+
+  // local storage
+  localStorage.setItem('github-user', value);
+
+  this.reset();
 }
 
 // disaply data
@@ -118,9 +142,4 @@ function displayData(data) {
       </div>
     </div>
   `;
-}
-
-// display error
-function dispalayError() {
-  errorHtml.classList.add('show');
 }
