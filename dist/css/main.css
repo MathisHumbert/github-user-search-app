@@ -155,6 +155,13 @@ header .toggle-btn__text {
   color: #f74646;
   width: 150px;
   text-align: center;
+  visibility: hidden;
+  -webkit-transition: visibility 0.5s ease-in-out;
+  transition: visibility 0.5s ease-in-out;
+}
+
+.form-error.show {
+  visibility: visible;
 }
 
 .form-btn {

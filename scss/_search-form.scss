@@ -32,7 +32,12 @@
     color: #f74646;
     width: 150px;
     text-align: center;
-    // visibility: hidden;
+    visibility: hidden;
+    transition: visibility 0.5s ease-in-out;
+
+    &.show {
+      visibility: visible;
+    }
   }
 
   &-btn {
