@@ -72,7 +72,7 @@ function displayData(data) {
         <h2 class="user-followers">${followers}</h2>
       </div>
       <div class="user-stat">
-        <h4>following</h4>
+        <h4>Following</h4>
         <h2 class="user-following">${following}</h2>
       </div>
     </div>

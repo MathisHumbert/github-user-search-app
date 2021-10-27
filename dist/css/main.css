@@ -287,6 +287,62 @@ header .toggle-btn__text {
   color: #4b6a9b;
 }
 
+@media screen and (min-width: 768px) {
+  .user {
+    width: calc(100vw - 6rem);
+    padding: 2rem;
+  }
+  .user-header {
+    margin: 2rem 0;
+    gap: 2rem;
+  }
+  .user-header .user-img {
+    width: 117px;
+    border-radius: 50%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .user-header .user-info-name {
+    font-size: 26px;
+    margin-bottom: 8px;
+  }
+  .user-header .user-info-subname {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  .user-text {
+    margin: 2rem 0;
+  }
+  .user-stats {
+    margin: 2rem 0;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-items: left;
+    gap: 0;
+  }
+  .user-stats h4 {
+    text-align: left;
+  }
+  .user-stats h2 {
+    font-size: 22px;
+    text-align: left;
+  }
+  .user-footer {
+    margin: 2rem 0;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
 body {
   background: #f6f8ff;
 }
