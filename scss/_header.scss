@@ -8,13 +8,26 @@ header {
 
   h1 {
     letter-spacing: 0;
-    color: $secondary-color;
+    color: $header-color;
+  }
+
+  .image {
+    transition: fill 0.5s ease-in-out;
   }
 
   .toggle-btn {
     display: flex;
     align-items: center;
     gap: 1rem;
+    cursor: pointer;
+
+    &:hover .image {
+      fill: $header-color;
+    }
+
+    &:hover .toggle-btn__text {
+      color: $header-color;
+    }
 
     &__text {
       font-weight: 700;
@@ -22,6 +35,7 @@ header {
       text-transform: uppercase;
       letter-spacing: 2.5px;
       color: $primary-color;
+      transition: color 0.5s ease-in-out;
     }
   }
 }

@@ -3,6 +3,9 @@ const user = document.querySelector('.user');
 const errorHtml = document.querySelector('.form-error');
 const form = document.querySelector('.form');
 const text = document.querySelector('.form-input');
+const btn = document.querySelector('.form-btn');
+const toggleBtn = document.querySelector('.toggle-btn');
+let html = document.querySelector('html');
 
 // API
 const API_URL = 'https://api.github.com/users/';
@@ -59,7 +62,7 @@ function searchForm(e) {
   e.preventDefault();
   let value = text.value;
 
-  // search for a user
+  // search for a user and display
   getData(API_URL + value);
 
   // local storage
@@ -67,6 +70,15 @@ function searchForm(e) {
 
   this.reset();
 }
+
+// btn effect color
+window.addEventListener('click', (e) => {
+  if (e.target === text || text.value !== '') btn.classList.add('active');
+  else btn.classList.remove('active');
+});
+
+// html color
+toggleBtn.addEventListener('click', toggleHtmlColor);
 
 // disaply data
 function displayData(data) {
@@ -116,30 +128,35 @@ function displayData(data) {
       </div>
     </div>
     <div class="user-footer">
-      <div class="user-footer-item">
+      <div class="user-footer-item ${location === null ? 'not-available' : ''}">
         <img src="../starter-code/assets/icon-location.svg" alt="" />
-        <p class="user-location ${location === null ? 'not-available' : ''}">${
-    location === null ? 'Not Available' : location
-  }</p>
+        <p class="user-location">${
+          location === null ? 'Not Available' : location
+        }</p>
       </div>
-      <div class="user-footer-item">
+      <div class="user-footer-item ${
+        twitter_username === null ? 'not-available' : ''
+      }">
         <img src="../starter-code/assets/icon-twitter.svg" alt="" />
-        <p class="user-twitter ${
-          twitter_username === null ? 'not-available' : ''
-        }">${twitter_username === null ? 'Not Available' : twitter_username}</p>
+        <p class="user-twitter">${
+          twitter_username === null ? 'Not Available' : twitter_username
+        }</p>
       </div>
-      <div class="user-footer-item">
+      <div class="user-footer-item ${blog === '' ? 'not-available' : ''}">
         <img src="../starter-code/assets/icon-website.svg" alt="" />
-        <p class="user-website ${blog === '' ? 'not-available' : ''}">${
-    blog === '' ? 'Not Available' : blog
-  }</p>
+        <p class="user-website">${blog === '' ? 'Not Available' : blog}</p>
       </div>
-      <div class="user-footer-item">
+      <div class="user-footer-item ${company === null ? 'not-available' : ''}">
         <img src="../starter-code/assets/icon-company.svg" alt="" />
-        <p class="user-company ${company === null ? 'not-available' : ''}">${
-    company === null ? 'Not Available' : `@${company}`
-  }</p>
+        <p class="user-company">${
+          company === null ? 'Not Available' : `@${company}`
+        }</p>
       </div>
     </div>
   `;
+}
+
+function toggleHtmlColor() {
+  if (html.classList.contains('dark')) html.classList.remove('dark');
+  else html.classList.add('dark');
 }

@@ -63,7 +63,12 @@ header {
 
 header h1 {
   letter-spacing: 0;
-  color: #2b3442;
+  color: #222731;
+}
+
+header .image {
+  -webkit-transition: fill 0.5s ease-in-out;
+  transition: fill 0.5s ease-in-out;
 }
 
 header .toggle-btn {
@@ -74,6 +79,15 @@ header .toggle-btn {
       -ms-flex-align: center;
           align-items: center;
   gap: 1rem;
+  cursor: pointer;
+}
+
+header .toggle-btn:hover .image {
+  fill: #222731;
+}
+
+header .toggle-btn:hover .toggle-btn__text {
+  color: #222731;
 }
 
 header .toggle-btn__text {
@@ -82,6 +96,8 @@ header .toggle-btn__text {
   text-transform: uppercase;
   letter-spacing: 2.5px;
   color: #4b6a9b;
+  -webkit-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
 }
 
 @media screen and (min-width: 768px) {
@@ -174,6 +190,16 @@ header .toggle-btn__text {
   padding: 12.5px 15px;
   border-radius: 10px;
   cursor: pointer;
+  -webkit-transition: background 0.5s ease-in-out;
+  transition: background 0.5s ease-in-out;
+}
+
+.form-btn:hover {
+  background: #60abff;
+}
+
+.form-btn.active {
+  background: #60abff;
 }
 
 @media screen and (min-width: 768px) {
@@ -363,6 +389,19 @@ header .toggle-btn__text {
     display: grid;
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+  }
+  .user-footer-item {
+    cursor: pointer;
+  }
+  .user-footer-item:hover {
+    text-decoration: underline;
+  }
+  .user-footer-item.not-available {
+    opacity: 0.5;
+    cursor: inherit;
+  }
+  .user-footer-item.not-available:hover {
+    text-decoration: none;
   }
 }
 
