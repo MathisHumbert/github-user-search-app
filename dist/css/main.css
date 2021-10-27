@@ -1,10 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+:root {
+  --primary-color: #4b6a9b;
+  --secondary-color: #373f4b;
+  --ternary-color: #697c9a;
+  --bg-primary-color: #f6f8ff;
+  --bg-seconday-color: #fefefe;
+  --header-color: #222731;
+  --header-logo-color: #222731;
+}
+
+html.dark {
+  --primary-color: #fff;
+  --secondary-color: #fff;
+  --ternary-color: #fff;
+  --bg-primary-color: #141d2f;
+  --bg-seconday-color: #1e2a47;
+  --header-color: #fff;
+  --header-logo-color: #90a4d4;
+}
+
 * {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Space Mono', monospace;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 h1 {
@@ -63,12 +85,11 @@ header {
 
 header h1 {
   letter-spacing: 0;
-  color: #222731;
+  color: var(--header-color);
 }
 
 header .image {
-  -webkit-transition: fill 0.5s ease-in-out;
-  transition: fill 0.5s ease-in-out;
+  fill: var(--primary-color);
 }
 
 header .toggle-btn {
@@ -83,11 +104,11 @@ header .toggle-btn {
 }
 
 header .toggle-btn:hover .image {
-  fill: #222731;
+  fill: var(--header-logo-color);
 }
 
 header .toggle-btn:hover .toggle-btn__text {
-  color: #222731;
+  color: var(--header-logo-color);
 }
 
 header .toggle-btn__text {
@@ -95,9 +116,7 @@ header .toggle-btn__text {
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 2.5px;
-  color: #4b6a9b;
-  -webkit-transition: color 0.5s ease-in-out;
-  transition: color 0.5s ease-in-out;
+  color: var(--primary-color);
 }
 
 @media screen and (min-width: 768px) {
@@ -119,7 +138,7 @@ header .toggle-btn__text {
   width: calc(100vw - 48px);
   padding: 12px;
   margin: 1rem auto;
-  background: #fefefe;
+  background: var(--bg-seconday-color);
   border-radius: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -137,29 +156,30 @@ header .toggle-btn__text {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  color: #2b3442;
+  background: transparent;
+  color: var(--secondary-color);
   font-size: 13px;
   border: none;
   cursor: pointer;
 }
 
 .form-input::-webkit-input-placeholder {
-  color: #4b6a9b;
+  color: var(--primary-color);
   font-size: 13px;
 }
 
 .form-input:-ms-input-placeholder {
-  color: #4b6a9b;
+  color: var(--primary-color);
   font-size: 13px;
 }
 
 .form-input::-ms-input-placeholder {
-  color: #4b6a9b;
+  color: var(--primary-color);
   font-size: 13px;
 }
 
 .form-input::placeholder {
-  color: #4b6a9b;
+  color: var(--primary-color);
   font-size: 13px;
 }
 
@@ -172,8 +192,6 @@ header .toggle-btn__text {
   width: 150px;
   text-align: center;
   visibility: hidden;
-  -webkit-transition: visibility 0.5s ease-in-out;
-  transition: visibility 0.5s ease-in-out;
 }
 
 .form-error.show {
@@ -190,8 +208,6 @@ header .toggle-btn__text {
   padding: 12.5px 15px;
   border-radius: 10px;
   cursor: pointer;
-  -webkit-transition: background 0.5s ease-in-out;
-  transition: background 0.5s ease-in-out;
 }
 
 .form-btn:hover {
@@ -239,7 +255,7 @@ header .toggle-btn__text {
 }
 
 .user {
-  background: #fefefe;
+  background: var(--bg-seconday-color);
   width: calc(100vw - 48px);
   padding: 2rem 24px;
   margin: 0 auto;
@@ -268,7 +284,7 @@ header .toggle-btn__text {
 
 .user-header .user-info-name {
   font-size: 16px;
-  color: #2b3442;
+  color: var(--secondary-color);
 }
 
 .user-header .user-info-subname {
@@ -278,18 +294,18 @@ header .toggle-btn__text {
 }
 
 .user-header .user-info-date {
-  color: #697c9a;
+  color: var(--ternary-color);
 }
 
 .user-text {
   margin: 20px 0;
-  color: #4b6a9b;
+  color: var(--primary-color);
   line-height: 25px;
 }
 
 .user-stats {
   margin: 20px 0;
-  background: #f6f8ff;
+  background: var(--bg-primary-color);
   padding: 1rem;
   border-radius: 10px;
   display: -webkit-box;
@@ -302,14 +318,14 @@ header .toggle-btn__text {
 }
 
 .user-stats h4 {
-  color: #4b6a9b;
+  color: var(--primary-color);
   font-weight: 400;
   text-align: center;
 }
 
 .user-stats h2 {
   font-size: 16px;
-  color: #2b3442;
+  color: var(--secondary-color);
   text-align: center;
 }
 
@@ -329,11 +345,32 @@ header .toggle-btn__text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   gap: 1rem;
-  color: #4b6a9b;
+  color: var(--primary-color);
+}
+
+.user-footer-item path {
+  fill: var(--primary-color);
+}
+
+.user-footer-item p {
+  cursor: pointer;
+}
+
+.user-footer-item:hover p {
+  text-decoration: underline;
+}
+
+.user-footer-item.not-available {
+  opacity: 0.5;
+}
+
+.user-footer-item.not-available p {
+  cursor: inherit;
+}
+
+.user-footer-item.not-available:hover p {
+  text-decoration: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -390,19 +427,6 @@ header .toggle-btn__text {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
   }
-  .user-footer-item {
-    cursor: pointer;
-  }
-  .user-footer-item:hover {
-    text-decoration: underline;
-  }
-  .user-footer-item.not-available {
-    opacity: 0.5;
-    cursor: inherit;
-  }
-  .user-footer-item.not-available:hover {
-    text-decoration: none;
-  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -430,7 +454,7 @@ header .toggle-btn__text {
 }
 
 body {
-  background: #f6f8ff;
+  background: var(--bg-primary-color);
   padding-bottom: 24px;
 }
 

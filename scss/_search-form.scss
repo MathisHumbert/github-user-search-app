@@ -12,7 +12,7 @@
   &-input {
     width: 100%;
     height: fit-content;
-
+    background: transparent;
     color: $secondary-color;
     font-size: 13px;
     border: none;
@@ -33,7 +33,6 @@
     width: 150px;
     text-align: center;
     visibility: hidden;
-    transition: visibility 0.5s ease-in-out;
 
     &.show {
       visibility: visible;
@@ -50,7 +49,6 @@
     padding: 12.5px 15px;
     border-radius: 10px;
     cursor: pointer;
-    transition: background 0.5s ease-in-out;
 
     &:hover {
       background: #60abff;

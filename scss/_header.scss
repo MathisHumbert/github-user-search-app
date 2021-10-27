@@ -12,7 +12,7 @@ header {
   }
 
   .image {
-    transition: fill 0.5s ease-in-out;
+    fill: $primary-color;
   }
 
   .toggle-btn {
@@ -22,11 +22,11 @@ header {
     cursor: pointer;
 
     &:hover .image {
-      fill: $header-color;
+      fill: $header-logo-color;
     }
 
     &:hover .toggle-btn__text {
-      color: $header-color;
+      color: $header-logo-color;
     }
 
     &__text {
@@ -35,7 +35,6 @@ header {
       text-transform: uppercase;
       letter-spacing: 2.5px;
       color: $primary-color;
-      transition: color 0.5s ease-in-out;
     }
   }
 }
