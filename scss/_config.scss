@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 $color-blue: #0079ff;
-$primary-color: #4b6a8b;
+$primary-color: #4b6a9b;
 $secondary-color: #2b3442;
 $ternary-color: #697c9a;
 $bg-primary-color: #f6f8ff;
@@ -38,4 +38,29 @@ h4 {
 
 p {
   font-size: 13px;
+}
+
+@media screen and (min-width: 768px) {
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  h4 {
+    font-size: 13px;
+    font-weight: 400;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
 }
