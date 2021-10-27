@@ -61,7 +61,7 @@ function displayData(data) {
   } ${created_at[0]}</p>
       </div>
     </div>
-    <p class="user-text">${bio}</p>
+    <p class="user-text">$Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit maxime magni accusamus, tenetur optio natus. Accusamus aspernatur debitis officia, molestias consectetur iure, a minus nobis unde eos quibusdam sunt blanditiis expedita repellat ad reiciendis quod in minima et ipsum. Unde incidunt, explicabo repellendus soluta omnis odit quis minima eius eaque eos temporibus expedita nobis ipsum fugiat est tenetur quasi reiciendis autem. Consectetur placeat, quas aut fugit eos eligendi quam omnis quos obcaecati. Similique magnam voluptatem esse odio adipisci quae repudiandae suscipit. Placeat eligendi voluptatem fuga, a nostrum qui blanditiis cupiditate tempore deserunt natus magnam molestiae deleniti ipsum alias non quis!</p>
     <div class="user-stats">
       <div class="user-stat">
         <h4>Repos</h4>

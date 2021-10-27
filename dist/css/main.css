@@ -45,7 +45,7 @@ p {
 }
 
 header {
-  width: 100%;
+  width: 100vw;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -87,6 +87,15 @@ header .toggle-btn__text {
 @media screen and (min-width: 768px) {
   header {
     padding: 3rem 3rem 24px 3rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  header {
+    padding: 3rem 0rem 24px 0rem;
+    width: calc(100vw - 12rem);
+    max-width: 1600px;
+    margin: 0 auto;
   }
 }
 
@@ -186,6 +195,13 @@ header .toggle-btn__text {
   .form-btn {
     padding: 15px 25px;
     font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .form {
+    width: calc(100vw - 12rem);
+    max-width: 1600px;
   }
 }
 
@@ -343,7 +359,38 @@ header .toggle-btn__text {
   }
 }
 
+@media screen and (min-width: 1440px) {
+  .user {
+    width: calc(100vw - 12rem);
+    max-width: 1600px;
+    padding-left: 167px;
+    position: relative;
+  }
+  .user-img {
+    position: absolute;
+    left: 2rem;
+  }
+  .user-info-subname {
+    margin-bottom: 0;
+  }
+  .user-info-date {
+    position: absolute;
+    right: 2rem;
+    top: 4rem;
+  }
+  .user-footer {
+    gap: 20px;
+  }
+}
+
 body {
   background: #f6f8ff;
+  padding-bottom: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding-bottom: 3rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */

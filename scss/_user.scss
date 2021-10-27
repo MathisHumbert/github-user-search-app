@@ -138,3 +138,30 @@
     }
   }
 }
+
+@include dekstop {
+  .user {
+    width: calc(100vw - 12rem);
+    max-width: 1600px;
+    padding-left: 167px;
+    position: relative;
+  }
+
+  .user-img {
+    position: absolute;
+    left: 2rem;
+  }
+
+  .user-info-subname {
+    margin-bottom: 0;
+  }
+  .user-info-date {
+    position: absolute;
+    right: 2rem;
+    top: 4rem;
+  }
+
+  .user-footer {
+    gap: 20px;
+  }
+}

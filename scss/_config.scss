@@ -64,3 +64,9 @@ p {
     @content;
   }
 }
+
+@mixin dekstop {
+  @media screen and (min-width: 1440px) {
+    @content;
+  }
+}

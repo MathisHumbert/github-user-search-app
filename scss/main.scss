@@ -5,4 +5,11 @@
 
 body {
   background: $bg-primary-color;
+  padding-bottom: 24px;
+}
+
+@include tablet {
+  body {
+    padding-bottom: 3rem;
+  }
 }

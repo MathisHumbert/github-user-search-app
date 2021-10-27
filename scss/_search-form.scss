@@ -71,3 +71,10 @@
     }
   }
 }
+
+@include dekstop {
+  .form {
+    width: calc(100vw - 12rem);
+    max-width: 1600px;
+  }
+}

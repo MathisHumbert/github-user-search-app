@@ -1,5 +1,5 @@
 header {
-  width: 100%;
+  width: 100vw;
   height: fit-content;
   padding: 24px;
   display: flex;
@@ -29,5 +29,14 @@ header {
 @include tablet {
   header {
     padding: 3rem 3rem 24px 3rem;
+  }
+}
+
+@include dekstop {
+  header {
+    padding: 3rem 0rem 24px 0rem;
+    width: calc(100vw - 12rem);
+    max-width: 1600px;
+    margin: 0 auto;
   }
 }
